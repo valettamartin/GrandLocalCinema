@@ -65,7 +65,7 @@ codigoCompra = randomNumber + entradas + horarioID + randomNumber + pelicula
 
 for (let i = 1; i < parseInt(entradas + 1); i++) {
     let entradaID;
-    if (i<11) {
+    if (i<10) {
         entradaID = horarioID + pelicula + "0" + i
         entradasLista.push(new entradaNueva(i, entradaID))
     }
