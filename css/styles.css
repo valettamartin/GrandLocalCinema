@@ -3,6 +3,90 @@
     padding: 0px;
 }
 
-body {
-    background-color: blanchedalmond;
+header {
+    display: flex;
+    height: 100px;
+    position: sticky;
+}
+
+header img {
+    width: 65px;
+    height: 65px;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.movieCarousel {
+    width: 100%;
+    height: 43vw;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.movieCarouselButton {
+    top: 55%;
+    position: absolute;
+    transform: translateY(-50%);
+    border: 0px;
+    cursor: pointer;
+    background: rgba(111, 108, 108, 0.19);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(111, 108, 108, 0.29);
+}
+
+.movieCarouselButton img {
+    width: 40px;
+    height: 40px;
+}
+
+.movieCarouselButtonHidden {
+    display: none;
+}
+
+.movieCarouselButtonLeft {
+    left: 15px;
+    z-index: 20;
+}
+
+.movieCarouselButtonRight {
+    right: 15px;
+    z-index: 20;
+}
+
+.movieCarouselContainer {
+    position: relative;
+    height: 100%;
+}
+
+.movieCarouselTrack {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    transition: transform 750ms ease-in;
+}
+
+.movieCarouselSlide {
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+}
+
+.movieCarouselSlide img {
+    max-width: 100%;
+    max-height: auto;
+    margin-top: -10vw;
+    object-fit: cover;
 }

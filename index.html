@@ -4,18 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Document</title>
+    <title>Grand Local Cinema</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.svg">
 </head>
 <body>
     <header>
-
+        <image src="./assets/img/logo.png">
+        <h1>Grand Local Cinema</h1>
     </header>
     <main>
-
+        <section class="movieCarousel">
+            <button class="movieCarouselButton movieCarouselButtonLeft movieCarouselButtonHidden">
+                <img src="./assets/img/leftArrow.svg">
+            </button>
+            <div class="movieCarouselContainer">
+                <ul class="movieCarouselTrack">
+                    <li class="movieCarouselSlide movieCarouselSlideActive">
+                        <img src="./assets/img/moviechristmas.jpg">
+                    </li>
+                    <li class="movieCarouselSlide">
+                        <img src="./assets/img/moviedetective.jpg">
+                    </li>
+                    <li class="movieCarouselSlide">
+                        <img src="./assets/img/moviehorror.jpg">
+                    </li>
+                    <li class="movieCarouselSlide">
+                        <img src="./assets/img/movieracing.jpg">
+                    </li>
+                    <li class="movieCarouselSlide">
+                        <img src="./assets/img/moviesuperkid.jpg">
+                    </li>
+                </ul>
+            </div>
+            <button class="movieCarouselButton movieCarouselButtonRight">
+                <img src="./assets/img/rightArrow.svg">
+            </button>
+        </section>
     </main>
     <footer>
 
     </footer>
     <script src="./js/main.js"></script>
+    <script src="./js/carousel.js"></script>
 </body>
 </html>
