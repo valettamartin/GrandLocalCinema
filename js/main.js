@@ -32,17 +32,20 @@ slidesCarousel.forEach(slidePosition);
 //configuracion de botones
 let activeSlideIndex = slidesCarousel.findIndex(slide => slide.classList.contains('movieCarouselSlideActive'));
 
-//calculo de cuanto mover el carrusel
+//calculo de cuanto mover el carrusel y declaración de variables necesarias
 const moveToSlide = (trackCarousel, currentSlide, targetSlide) => {
     trackCarousel.style.transform = 'translateX(-' + targetSlide.style.left + ')';
     currentSlide.classList.remove('movieCarouselSlideActive')
     targetSlide.classList.add('movieCarouselSlideActive')
     activeSlideIndex = slidesCarousel.findIndex(slide => slide.classList.contains('movieCarouselSlideActive'));
     const movieTitleH2 = document.querySelector('.enrtyShop h2');
-    movieTitleH2.textContent = movieTitles[activeSlideIndex];
     const timeSelector = document.getElementById('timeSelector');
     timeSelector.innerHTML = '';
 
+    //reemplaza el titulo de la pelicula por el correcto
+    movieTitleH2.textContent = movieTitles[activeSlideIndex];
+
+    //reemplaza las horas seleccionables por las correctas
     movieTimings[activeSlideIndex].forEach(time => {
         const option = document.createElement('option');
         option.value = time;
@@ -85,6 +88,12 @@ function crearEntradas(fecha, hora, pelicula, entradas) {
     this.pelicula = pelicula;
     this.entradas = entradas;
 }
+
+//evita que la pagina se recargue al enviar el form
+const form = document.querySelector('form');
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+});
 
 function validarFormulario() {
     let selectedDate = document.getElementById('dateSelector').value;
@@ -150,6 +159,8 @@ function validarFormulario() {
     //creación, almacenamiento, y posteo al div correspondiente de un objeto con la información proporcionada
     const nuevaEntrada = new crearEntradas(selectedDate, selectedTime, movieTitle, entradasNumero);
     localStorage.setItem(purchaseIdentifier, JSON.stringify(nuevaEntrada));
+    const mostrarEntradasDiv = document.querySelector('.mostrarEntradasAlComprar');
+    mostrarEntradasDiv.innerHTML = "Usted ha adquirido " + entradasNumero + " entrada(s) para la función '" + movieTitle + "' a las " + selectedTime + " el día " + selectedDate + ".<br>Su código de compra es " + purchaseIdentifier + ", por favor, no lo pierda.";    
 
     return true;
 }
