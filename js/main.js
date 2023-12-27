@@ -165,3 +165,29 @@ function validarFormulario() {
     return true;
 }
 //fin de codigo del formulario
+
+//codigo de consulta de compras previas
+document.addEventListener('DOMContentLoaded', function () {
+    const consultForm = document.querySelector('.consultForm');
+    const consultedInformation = document.querySelector('.consultedInformation');
+
+     //evita que la página se recargue al enviar el formulario
+    consultForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        //codigo de funcionamiento de la consulta
+        const consultInput = document.querySelector('.consultInput').value;
+        if (localStorage.getItem(consultInput) !== null) {
+            const storedObject = JSON.parse(localStorage.getItem(consultInput));
+            consultedInformation.innerHTML = `
+                <p>Fecha: ${storedObject.fecha}</p>
+                <p>Hora: ${storedObject.hora}</p>
+                <p>Película: ${storedObject.pelicula}</p>
+                <p>Entradas: ${storedObject.entradas}</p>
+            `;
+        } else {
+            consultedInformation.innerHTML = 'No encontramos una compra que coincida con este código.';
+        }
+    });
+});
+//fin del codigo de consulta de compras previas

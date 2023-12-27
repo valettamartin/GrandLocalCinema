@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <image src="./assets/img/logo.png">
+        <img src="./assets/img/logo.png">
     </header>
     <main>
         <section class="movieCarousel">
@@ -62,7 +62,15 @@
             </div>
         </section>
         <section class="entryConsult">
-            <div class="consultContainer"></div>
+            <div class="consultContainer">
+                <h2>¿Desea consultar información acerca de una compra previa?</h2>
+                <form id="consultForm" class="consultForm">
+                    <input type="number" class="consultInput">
+                    <input type="submit" value="Consultar" class="consultSubmit">
+                </form>
+                <div class="consultDivider"></div>
+                <div class="consultedInformation">Aquí se mostrará la información de la compra solicitada.</div>
+            </div>
         </section>
     </main>
     <footer>

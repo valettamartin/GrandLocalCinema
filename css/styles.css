@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 * {
     margin: 0px;
@@ -104,11 +104,11 @@ body {
     height: 35vw;
     top: 10vw;
     left: 58vw;
-    background: rgba(45, 2, 2, 0.94);
+    background: rgba(26, 0, 0, 0.89);
     border-radius: 50px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3.4px);
-    -webkit-backdrop-filter: blur(3.4px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .overlayCarousel h2 {
@@ -176,12 +176,12 @@ input[type=number] {
 .formSubmit {
     margin-left: 5vw;
     text-align: center;
-    background: rgba(158, 158, 158, 0.233);
+    background: rgba(177, 177, 177, 0.452);
     border-radius: 5px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.6px);
     -webkit-backdrop-filter: blur(4.6px);
-    border: 1px solid rgba(178, 176, 176, 0.3);
+    border: 1px solid rgba(211, 210, 210, 0.301);
 }
 
 .mostrarEntradasAlComprar {
@@ -206,7 +206,7 @@ input[type=number] {
 
 .consultContainer {
     width: 80vw;
-    height: 20vw;
+    height: 22vw;
     margin: 0 auto;
     margin-top: 5vw;
     margin-bottom: 10vw;
@@ -216,4 +216,72 @@ input[type=number] {
     backdrop-filter: blur(11.9px);
     -webkit-backdrop-filter: blur(11.9px);
     border: 1px solid rgba(0, 0, 0, 0.65);
+}
+
+.consultContainer h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    padding-top: 2vw;
+    text-align: center;
+    color: rgba(245, 245, 245, 0.596);
+}
+
+.consultForm {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    margin-top: 1vw;
+}
+
+.consultInput {
+    font-size: 22px;
+    background: rgba(158, 158, 158, 0.233);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.6px);
+    -webkit-backdrop-filter: blur(4.6px);
+    border: 1px solid rgba(158, 158, 158, 0.233);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.548);
+}
+
+.consultSubmit {
+    font-size: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.6px);
+    -webkit-backdrop-filter: blur(4.6px);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.consultDivider {
+    margin: 0 auto;
+    margin-top: 1vw;
+    width: 70vw;
+    height: 1px;
+    background-color: rgba(241, 226, 136, 0.712);
+}
+
+.consultedInformation {
+    margin: 0 auto;
+    margin-top: 1vw;
+    width: 50vw;
+    height: 10vw;
+    background: rgba(200, 200, 200, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vw;
+    color: rgba(167, 167, 167, 0.5);
+    text-align: center;
 }
