@@ -39,11 +39,32 @@
                 <img src="./assets/img/rightArrow.svg">
             </button>
         </section>
+        <section class="enrtyShop">
+            <div class="overlayCarousel">
+                <h2>Abuela Claus</h2>
+                <div class="divideLine"></div>
+                <form onsubmit="return validarFormulario()" class="formGrid">
+                    <label for="dateSelector" class="gridArea1 labelText">¿Qué día piensa asistir?</label>
+                    <input id="dateSelector" type="date" class="gridArea2 inputText"><br>
+                    <label for="timeSelector" class="gridArea3 labelText">¿En qué función piensa asistir?</label>
+                    <select id="timeSelector" class="gridArea4 inputText" required>
+                        <option value="17:30">17:30</option>
+                        <option value="18:20">18:20</option>
+                        <option value="19:40">19:40</option>
+                        <option value="20:00">20:00</option>
+                    </select><br>
+                    <label for="numberSelector" class="gridArea5 labelText">¿Cuántos asientos desea?</label>
+                    <input id="numberSelector" type="number" class="gridArea6 inputText" required><br>
+                    <input type="submit" value="Comprar" class="gridArea7 inputText"><br>
+                </form>
+                <div class="divideLine"></div>
+                <div class="mostrarEntradasAlComprar">Aquí se mostrará la información de sus entradas al finalizar la compra.</div>
+            </div>
+        </section>
     </main>
     <footer>
 
     </footer>
     <script src="./js/main.js"></script>
-    <script src="./js/carousel.js"></script>
 </body>
 </html>
