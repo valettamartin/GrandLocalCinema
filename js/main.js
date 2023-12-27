@@ -32,6 +32,7 @@ slidesCarousel.forEach(slidePosition);
 //configuracion de botones
 let activeSlideIndex = slidesCarousel.findIndex(slide => slide.classList.contains('movieCarouselSlideActive'));
 
+//calculo de cuanto mover el carrusel
 const moveToSlide = (trackCarousel, currentSlide, targetSlide) => {
     trackCarousel.style.transform = 'translateX(-' + targetSlide.style.left + ')';
     currentSlide.classList.remove('movieCarouselSlideActive')
@@ -41,12 +42,15 @@ const moveToSlide = (trackCarousel, currentSlide, targetSlide) => {
     movieTitleH2.textContent = movieTitles[activeSlideIndex];
     const timeSelector = document.getElementById('timeSelector');
     timeSelector.innerHTML = '';
+
     movieTimings[activeSlideIndex].forEach(time => {
         const option = document.createElement('option');
         option.value = time;
         option.textContent = time;
         timeSelector.appendChild(option);
     });
+
+    //define si el botón se muestra o no
     if (activeSlideIndex === 0) {
         leftButton.classList.add('movieCarouselButtonHidden');
         rightButton.classList.remove('movieCarouselButtonHidden');
@@ -74,9 +78,19 @@ rightButton.addEventListener('click', c => {
 //fin de codigo del carrusel
 
 //codigo del formulario
+//constructor del objeto de la compra
+function crearEntradas(fecha, hora, pelicula, entradas) {
+    this.fecha = fecha;
+    this.hora = hora;
+    this.pelicula = pelicula;
+    this.entradas = entradas;
+}
+
 function validarFormulario() {
     let selectedDate = document.getElementById('dateSelector').value;
+    let selectedTime = document.getElementById('timeSelector').value;
     let entradasNumero = document.getElementById('numberSelector').value;
+    let movieTitle = document.querySelector('.enrtyShop h2').textContent;
 
     //establece los dias necesarios corrigiendo la hora para coincidir con la zona horaria local
     let dateToday = new Date();
@@ -86,6 +100,31 @@ function validarFormulario() {
     oneMonthLater.setMonth(oneMonthLater.getMonth() + 1);
     oneMonthLater.setHours(oneMonthLater.getHours() - 3)
     oneMonthLater = oneMonthLater.toISOString().split('T')[0];
+
+    //creación de un código para identificar la entrada
+    let dateForCode = selectedDate.slice(4).replaceAll("-", "");
+    let hourForCode = selectedTime.replaceAll(":","")
+    let numberForCode1 = Math.floor(Math.random()*100);
+    let numberForCode2 = Math.floor(Math.random()*100);
+    let movieNameForCode;
+    switch (movieTitle) {
+        case "Mi Pobre Diablito":
+            movieNameForCode = "0"
+            break;
+        case "Shellock Gnomes":
+            movieNameForCode = "1"
+            break;
+        case "El Fantasma del Capitolio":
+            movieNameForCode = "2"
+            break;
+        case "Rápidos e Inseguros":
+            movieNameForCode = "3"
+            break;
+        case "Héroes en Almohadas":
+            movieNameForCode = "4"
+            break;
+    }
+    let purchaseIdentifier = numberForCode1 + hourForCode + dateForCode + movieNameForCode + numberForCode2;
 
     //controlador de fecha
     if (selectedDate < dateToday) {
@@ -108,6 +147,10 @@ function validarFormulario() {
         return false;
     }
     
+    //creación, almacenamiento, y posteo al div correspondiente de un objeto con la información proporcionada
+    const nuevaEntrada = new crearEntradas(selectedDate, selectedTime, movieTitle, entradasNumero);
+    localStorage.setItem(purchaseIdentifier, JSON.stringify(nuevaEntrada));
+
     return true;
 }
 //fin de codigo del formulario
