@@ -59,6 +59,7 @@ const moveToSlide = (trackCarousel, currentSlide, targetSlide) => {
     }
 }
 
+//funcionalidad de los botones
 leftButton.addEventListener('click', c => { 
     const currentSlide = trackCarousel.querySelector('.movieCarouselSlideActive');
     const prevSlide = currentSlide.previousElementSibling;
@@ -76,9 +77,14 @@ rightButton.addEventListener('click', c => {
 function validarFormulario() {
     let selectedDate = document.getElementById('dateSelector').value;
     let entradasNumero = document.getElementById('numberSelector').value;
-    let dateToday = new Date().toISOString().split('T')[0];
+
+    //establece los dias necesarios corrigiendo la hora para coincidir con la zona horaria local
+    let dateToday = new Date();
+    dateToday.setHours(dateToday.getHours() - 3);
+    dateToday = dateToday.toISOString().split('T')[0];
     let oneMonthLater = new Date();
     oneMonthLater.setMonth(oneMonthLater.getMonth() + 1);
+    oneMonthLater.setHours(oneMonthLater.getHours() - 3)
     oneMonthLater = oneMonthLater.toISOString().split('T')[0];
 
     //controlador de fecha
