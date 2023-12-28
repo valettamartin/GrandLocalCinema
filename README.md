@@ -1,5 +1,5 @@
 # Grand Local Cinema
-./assets/img/logo.png
+![alt text](https://github.com/valettamartin/PreEntrega3-Valetta/blob/main/assets/img/logo.png "logo")
 
 ¡Bienvenido a "Grand Local Cinema"! Un prototipo de página web de un cine en la cual se puede realizar la compra de entradas a las diferentes funciones que ofrece, además de guardar la información de estas compras, y permitir acceder a la información pertinente a estas. 
 
@@ -8,6 +8,8 @@
 La página se encuentra hosteada en la siguiente dirección web: https://valettamartin.github.io/PreEntrega3-Valetta/
  
 # Información técnica:
+
+Actualmente la página no cuenta con una adaptación responsive desarrollada. Se encuentra diseñada para una resolución de 1920x1080px, y no se asegura su correcta visualización en otras resoluciones.
 
 V1.0 - Se declara la primera versión completamente funcional de la página, permitiendo todas las funciones mínimas planeadas.
 
