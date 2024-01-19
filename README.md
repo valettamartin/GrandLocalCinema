@@ -7,13 +7,13 @@
 
 La página cuenta con un sistema de generación de códgio de compras para asistir a funciones en un cine ficticio, además de una función de consulta de compras previas.
 Para hacer uso de esta, usted debe:
-1 - Seleccionar a que función desea asistir con el carrusel en la parte superior de la página.
-2 - Localizar el cuadro flotante ubicado encima del carrusel previamente mencionado.
-3 - Completar el formulario allí presente.
-4 - Darle comprar y confirmar la compra.
-5 - Recuerde guardar el codigo de compra generado, el cual aparecerá en la parte inferior del cuadro flotante.
-6 - Dirijase al contenedor localizado debajo del carrusel.
-7 - Inserte su código para consultar la información de la compra previamente realizada.
+- Seleccionar a que función desea asistir con el carrusel en la parte superior de la página.
+- Localizar el cuadro flotante ubicado encima del carrusel previamente mencionado.
+- Completar el formulario allí presente.
+- Darle comprar y confirmar la compra.
+- Recuerde guardar el codigo de compra generado, el cual aparecerá en la parte inferior del cuadro flotante.
+- Dirijase al contenedor localizado debajo del carrusel.
+- Inserte su código para consultar la información de la compra previamente realizada.
 
 ## ¿Donde puedo acceder a la página en linea?
 
