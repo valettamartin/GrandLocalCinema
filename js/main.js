@@ -218,7 +218,9 @@ function validarFormulario() {
             const nuevaEntrada = new crearEntradas(selectedDate, selectedTime, movieTitle, entradasNumero);
             localStorage.setItem(purchaseIdentifier, JSON.stringify(nuevaEntrada));
             const mostrarEntradasDiv = document.querySelector('.mostrarEntradasAlComprar');
-            mostrarEntradasDiv.innerHTML = "Usted ha adquirido " + entradasNumero + " entrada(s) para la función '" + movieTitle + "' a las " + selectedTime + " el día " + selectedDate + ".<br>Su código de compra es " + purchaseIdentifier + ", por favor, no lo pierda.";
+            //formato del texto antes de imprimirlo
+            let fechaParaMostrar = selectedDate.split("-")
+            mostrarEntradasDiv.innerHTML = "Usted ha adquirido " + entradasNumero + " entrada(s) para la función '" + movieTitle + "' a las " + selectedTime + " el día " + fechaParaMostrar[2] + "/" + fechaParaMostrar[1] + "/" + fechaParaMostrar[0] + ".<br>Su código de compra es " + purchaseIdentifier + ", por favor, no lo pierda.";
             return true;
         } else if(result.isDenied) {
             Swal.fire({
@@ -248,8 +250,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const consultInput = document.querySelector('.consultInput').value;
         if (localStorage.getItem(consultInput) !== null) {
             const storedObject = JSON.parse(localStorage.getItem(consultInput));
+            let fechaParaMostrarConsulta = storedObject.fecha.split("-")
             consultedInformation.innerHTML = `
-                <p>Fecha: ${storedObject.fecha}</p>
+                <p>Fecha: ${fechaParaMostrarConsulta[2]}/${fechaParaMostrarConsulta[1]}/${fechaParaMostrarConsulta[0]}</p>
                 <p>Hora: ${storedObject.hora}</p>
                 <p>Película: ${storedObject.pelicula}</p>
                 <p>Entradas: ${storedObject.entradas}</p>
