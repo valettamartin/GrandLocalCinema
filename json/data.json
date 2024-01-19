@@ -1,0 +1,23 @@
+[
+    {
+        "movieTitle": "Mi Pobre Diablito",
+        "movieTimings": ["17:30", "18:20", "19:40", "20:00"]
+    },
+    {
+        "movieTitle": "Shellock Gnomes",
+        "movieTimings": ["18:20", "19:00", "20:30", "21:20"]
+    },
+    {
+        "movieTitle": "El Fantasma del Capitolio",
+        "movieTimings": ["18:00", "19:20", "21:00", "22:00"]
+    },
+    {
+        "movieTitle": "Rápidos e Inseguros",
+        "movieTimings": ["17:40", "18:10", "18:40", "19:00"]
+    },
+    {
+        "movieTitle": "Héroes en Almohadas",
+        "movieTimings": ["15:00", "16:10", "17:40", "18:10"]
+    }
+]
+  

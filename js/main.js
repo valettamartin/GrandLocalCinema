@@ -6,20 +6,19 @@ const slidesCarousel = Array.from(trackCarousel.children);
 const rightButton = document.querySelector('.movieCarouselButtonRight');
 const leftButton = document.querySelector('.movieCarouselButtonLeft');
 
-const movieTitles = [
-    "Mi Pobre Diablito",
-    "Shellock Gnomes",
-    "El Fantasma del Capitolio",
-    "Rápidos e Inseguros",
-    "Héroes en Almohadas"
-]
-const movieTimings = [
-    ["17:30", "18:20", "19:40", "20:00"],
-    ["18:20", "19:00", "20:30", "21:20"],
-    ["18:00", "19:20", "21:00", "22:00"],
-    ["17:40", "18:10", "18:40", "19:00"],
-    ["15:00", "16:10", "17:40", "18:10"]
-]
+//solicitamos la informacion de data.json
+let movieTitles = []
+let movieTimings = []
+
+fetch("../json/data.json")
+    .then(res => res.json())
+    .then(data => {
+        data.forEach(Object => {
+            movieTitles.push(Object.movieTitle),
+            movieTimings.push(Object.movieTimings)
+        })
+    })
+    .catch(error => console.error("Error al cargar data.json"))
 
 //obtengo el tamaño del slide para saber cuanto mover
 const slideSize = slidesCarousel[0].getBoundingClientRect().width;
