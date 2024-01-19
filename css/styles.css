@@ -6,6 +6,10 @@
     padding: 0px;
 }
 
+.swal2-popup {
+    font-family: 'Roboto', sans-serif;
+  }
+
 header {
     display: flex;
     height: 125px;

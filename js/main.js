@@ -136,32 +136,102 @@ function validarFormulario() {
 
     //controlador de fecha
     if (selectedDate < dateToday) {
-        alert("¡Esta función ya pasó!");
+        Swal.fire({
+            title: "¡Lo sentimos!",
+            text: "Esta función ya pasó",
+            icon: "error",
+            color: "#312C38",
+            background: "#F7EFE7",
+            allowOutsideClick: "false",
+            confirmButtonColor: "#BFB0A0"
+        })
         return false;
     } else if (selectedDate > oneMonthLater) {
-        alert("¡Lo sentimos! No permitimos reservas con más de un mes de antelación.");
+        Swal.fire({
+            title: "¡Lo sentimos!",
+            text: "No permitimos reservas con más de un mes de antelación.",
+            icon: "error",
+            color: "#312C38",
+            background: "#F7EFE7",
+            allowOutsideClick: "false",
+            confirmButtonColor: "#BFB0A0"
+        })
         return false;
     } else if (selectedDate === dateToday) {
-        alert("¡Lo sentimos! Las entradas para las funciones de hoy ya se han acabado.");
+        Swal.fire({
+            title: "¡Lo sentimos!",
+            text: "Las entradas para las funciones de hoy ya se han acabado.",
+            icon: "error",
+            color: "#312C38",
+            background: "#F7EFE7",
+            allowOutsideClick: "false",
+            confirmButtonColor: "#BFB0A0"
+        })
         return false
     } 
 
     //controlador de cantidad de entradas
     if (entradasNumero > 45) {
-        alert("¡Lo sentimos! Nuestras salas tienen una capacidad máxima de 45 personas.");
+        Swal.fire({
+            title: "¡Lo sentimos!",
+            text: "Nuestras salas tienen una capacidad máxima de 45 personas.",
+            icon: "error",
+            color: "#312C38",
+            background: "#F7EFE7",
+            allowOutsideClick: "false",
+            confirmButtonColor: "#BFB0A0"
+        })
         return false;
     } else if (entradasNumero < 1) {
-        alert("¡La cantidad de entradas ingresada no es válida!");
+        Swal.fire({
+            title: "Creemos que has cometido un error",
+            text: "La cantidad de entradas ingresadas no es valida",
+            icon: "warning",
+            color: "#312C38",
+            background: "#F7EFE7",
+            allowOutsideClick: "false",
+            confirmButtonColor: "#BFB0A0"
+        })
         return false;
     }
     
     //creación, almacenamiento, y posteo al div correspondiente de un objeto con la información proporcionada
-    const nuevaEntrada = new crearEntradas(selectedDate, selectedTime, movieTitle, entradasNumero);
-    localStorage.setItem(purchaseIdentifier, JSON.stringify(nuevaEntrada));
-    const mostrarEntradasDiv = document.querySelector('.mostrarEntradasAlComprar');
-    mostrarEntradasDiv.innerHTML = "Usted ha adquirido " + entradasNumero + " entrada(s) para la función '" + movieTitle + "' a las " + selectedTime + " el día " + selectedDate + ".<br>Su código de compra es " + purchaseIdentifier + ", por favor, no lo pierda.";    
-
-    return true;
+    Swal.fire({
+        title: "¿Desea confirmar la compra?",
+        showDenyButton: true,
+        icon: "question",
+        color: "#312C38",
+        background: "#F7EFE7",
+        allowOutsideClick: "false",
+        confirmButtonColor: "#BFB0A0"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: "Se ha guardado su compra",
+                text: "¡Gracias por elegirnos!",
+                icon: "success",
+                color: "#312C38",
+                background: "#F7EFE7",
+                allowOutsideClick: "false",
+                confirmButtonColor: "#BFB0A0"
+            })
+            const nuevaEntrada = new crearEntradas(selectedDate, selectedTime, movieTitle, entradasNumero);
+            localStorage.setItem(purchaseIdentifier, JSON.stringify(nuevaEntrada));
+            const mostrarEntradasDiv = document.querySelector('.mostrarEntradasAlComprar');
+            mostrarEntradasDiv.innerHTML = "Usted ha adquirido " + entradasNumero + " entrada(s) para la función '" + movieTitle + "' a las " + selectedTime + " el día " + selectedDate + ".<br>Su código de compra es " + purchaseIdentifier + ", por favor, no lo pierda.";
+            return true;
+        } else if(result.isDenied) {
+            Swal.fire({
+                title: "Se ha cancelado su compra",
+                icon: "error",
+                color: "#312C38",
+                background: "#F7EFE7",
+                allowOutsideClick: "false",
+                confirmButtonColor: "#BFB0A0"
+            })
+            return false;
+        }
+    })
 }
 //fin de codigo del formulario
 
