@@ -167,6 +167,7 @@ body {
     -webkit-backdrop-filter: blur(4.6px);
     border: none;
     color: #f7efe7ab;
+    margin-right: 0px;
 }
 
 option {
