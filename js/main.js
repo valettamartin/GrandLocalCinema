@@ -18,7 +18,7 @@ fetch("../json/data.json")
             movieTimings.push(Object.movieTimings)
         })
     })
-    .catch(error => console.error("Error al cargar data.json"))
+    .catch(error => console.error(error))
 
 //obtengo el tamaño del slide para saber cuanto mover
 const slideSize = slidesCarousel[0].getBoundingClientRect().width;
