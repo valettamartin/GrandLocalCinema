@@ -11,14 +11,13 @@ let movieTitles = []
 let movieTimings = []
 
 fetch("../json/data.json")
-    .then(example => console.log(example))
-/*    .then(res => res.json())
+    .then(res => res.json())
     .then(data => {
         data.forEach(Object => {
             movieTitles.push(Object.movieTitle),
             movieTimings.push(Object.movieTimings)
         })
-    })*/
+    })
     .catch(error => console.log(error))
 
 //obtengo el tamaño del slide para saber cuanto mover
