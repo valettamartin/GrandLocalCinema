@@ -21,9 +21,7 @@ La página se encuentra hosteada en la siguiente dirección web: https://valetta
 
 # Información técnica:
 
-Actualmente la página no cuenta con una adaptación responsive desarrollada. Se encuentra diseñada para una resolución de 1920x1080px, y no se asegura su correcta visualización en otras resoluciones.
-
-V1.0 - Se declara la primera versión completamente funcional de la página, permitiendo todas las funciones mínimas planeadas.
+V2.0 - Con el responsive funcional y las funciones definitivas, la página se encuentra lista para su visualización en cualquier dispositivo.
 
 Lenguajes utilizados - HTML, CSS y JavaScript.
 
