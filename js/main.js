@@ -10,7 +10,7 @@ const leftButton = document.querySelector('.movieCarouselButtonLeft');
 let movieTitles = []
 let movieTimings = []
 
-fetch("../json/data.json")
+fetch("https://github.com/valettamartin/PreEntrega3-Valetta/blob/main/json/data.json")
     .then(res => res.json())
     .then(data => {
         data.forEach(Object => {
