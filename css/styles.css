@@ -192,6 +192,7 @@ input[type=number] {
 }
 
 .mostrarEntradasAlComprar {
+    overflow-y: auto;
     font-size: 22px;
     height: 11vw;
     width: 22vw;
@@ -207,10 +208,6 @@ input[type=number] {
     backdrop-filter: blur(8.8px);
     -webkit-backdrop-filter: blur(8.8px);
     font-family: 'Roboto', sans-serif;
-    font-size: 22px;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    padding-top: 1vw;
     color: #f7efe7ab;
     text-align: center;
 }
@@ -274,6 +271,7 @@ input[type=number] {
 }
 
 .consultedInformation {
+    overflow-y: auto;
     margin: 0 auto;
     margin-top: 1vw;
     width: 50vw;
@@ -344,4 +342,399 @@ input[type=number] {
     height: 10vw;
     width: 27vw;
     border-radius: 10px;
+}
+
+/*responsive del header*/
+@media screen and (max-width: 1470px) {
+    header {
+        height: 100px;
+    }
+    header img {
+        height: 95px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    header {
+        height: 70px;
+    }
+    header img {
+        height: 65px;
+    }
+}
+
+/*responsive del formulario*/
+@media screen and (max-width: 1860px) {
+    .overlayCarousel h2 {
+        font-size: 30px;
+    }
+    .labelText {
+        font-size: 18px;
+    }
+    .inputText {
+        font-size: 16px;
+    }
+    .mostrarEntradasAlComprar {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    .overlayCarousel h2 {
+        font-size: 28px;
+    }
+    .labelText {
+        font-size: 16px;
+    }
+    .inputText {
+        font-size: 14px;
+    }
+    .mostrarEntradasAlComprar {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1470px) {
+    .overlayCarousel {
+        width: 40vw;
+        top: 11vw;
+        left: 50vw;
+    }
+    .divideLine {
+        width: 32vw;
+    }
+    .mostrarEntradasAlComprar {
+        font-size: 14px;
+        height: 10vw;
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 1180px){
+    .overlayCarousel {
+        height: 40vw;
+        width: 50vw;
+        top: 13vw;
+        left: 40vw;
+    }
+    .divideLine {
+        width: 40vw;
+    }
+    .mostrarEntradasAlComprar {
+        height: 12vw;
+        width: 38vw;
+    }
+}
+
+@media screen and (max-width: 895px){
+    .overlayCarousel {
+        height: 48vw;
+        width: 80vw;
+        top: 13vw;
+        left: 10vw;
+    }
+    .divideLine {
+        width: 70vw;
+    }
+    .mostrarEntradasAlComprar {
+        height: 15vw;
+        width: 68vw;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .overlayCarousel {
+        height: 78vw;
+        width: 70vw;
+        top: 20vw;
+        left: 15vw;
+    }
+    .overlayCarousel h2 {
+        font-size: 24px;
+    }
+    .inputText {
+        margin-top: 2vw;
+    }
+    .divideLine {
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        width: 65vw;
+    }
+    .mostrarEntradasAlComprar {
+        height: 15vw;
+        width: 63vw;
+    }
+}
+
+@media screen and (max-width: 470px){
+    .movieCarouselButton img {
+        width: 25px;
+        height: 25px;
+    }
+    .movieCarouselButtonLeft {
+        left: 5px;
+    }
+    .movieCarouselButtonRight {
+        right: 5px;
+    }
+    .overlayCarousel {
+        width: 76vw;
+        height: 125vw;
+        top: 25vw;
+        left: 12vw;
+    }
+    .overlayCarousel h2 {
+        font-size: 18px;
+    }
+    .divideLine {
+        width: 70vw;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+    .labelText {
+        font-size: 12px;
+        margin-top: 2vw;
+        padding-right: 15px;
+    }
+    .inputText {
+        font-size: 8px;
+    }
+    .formSubmit {
+        font-size: 12px;
+    }
+    .mostrarEntradasAlComprar {
+        font-size: 12px;
+        height: 50vw;
+        width: 65vw;
+        margin: 0 auto;
+    }
+}
+
+/*responsive del div de consulta*/
+@media screen and (max-width: 1860px) {
+    .consultContainer h2 {
+        font-size: 30px;
+    }
+    .consultInput {
+        font-size: 18px;
+    }
+    .consultSubmit {
+        font-size: 16px;
+    }
+    .consultedInformation {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    .consultContainer h2 {
+        font-size: 28px;
+    }
+    .consultInput {
+        font-size: 16px;
+    }
+    .consultSubmit {
+        font-size: 14px;
+    }
+    .consultedInformation {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .consultContainer {
+        height: 35vw;
+    }
+    .consultedInformation {
+        width: 50vw;
+        height: 15vw;
+    }
+}
+
+@media screen and (max-width: 895px){
+    .consultContainer {
+        width: 80vw;
+        height: 35vw;
+        margin-top: 15vw;
+        margin-bottom: 15vw;
+    }
+    .consultContainer h2 {
+        font-size: 22px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .consultedInformation {
+        width: 55vw;
+        height: 12vw;
+    }    
+}
+
+@media screen and (max-width: 600px){
+    .consultContainer {
+        width: 80vw;
+        height: 50vw;
+        margin-top: 50vw;
+        margin-bottom: 15vw;
+    }
+    .consultDivider {
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+    .consultedInformation {
+        width: 55vw;
+        height: 20vw;
+    }    
+}
+
+@media screen and (max-width: 470px){
+    .consultContainer {
+        height: 90vw;
+        margin-top: 100vw;
+        margin-bottom: 25vw;
+    }
+    .consultContainer h2 {
+        padding-top: 4vw;
+        padding-bottom: 2vw;
+        font-size: 16px;
+    }
+    .consultInput {
+        font-size: 12px;
+    }
+    .consultSubmit {
+        font-size: 12px;
+    }
+    .consultDivider {
+        margin-top: 4vw;
+        margin-bottom: 4vw;
+    }
+    .consultedInformation {
+        font-size: 12px;
+        width: 65vw;
+        height: 50vw;
+    }
+}
+
+/*responsive del footer*/
+@media screen and (max-width: 1860px) {
+    .footerBody1 h3, .footerBody2 h3 {
+        font-size: 28px;
+    }
+    .socialMediaIcon {
+        width: 50px;
+        height: 50px;
+    }
+    .footerContact {
+        font-size: 18px;
+    }
+    .footerBody2 iframe {
+        height: 8vw;
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    .footerBody1 h3, .footerBody2 h3 {
+        font-size: 24px;
+    }
+    .socialMediaIcon {
+        width: 40px;
+        height: 40px;
+    }
+    .footerContact {
+        font-size: 16px;
+    }
+    .footerBody2 iframe {
+        height: 8vw;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .footerBody2 iframe {
+        height: 10vw;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .footerContainer {
+        height: 30vw;
+    }
+    .footerBody1, .footerBody2 {
+        margin-top: 10vw;
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+    .footerBody1 h3, .footerBody2 h3 {
+        font-size: 20px;
+    }
+    .socialMediaIcon {
+        width: 35px;
+        height: 35px;
+    }
+    .footerContact {
+        font-size: 14px;
+    }
+    .footerBody2 iframe {
+        height: 11vw;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .footerContainer {
+        height: 65vw;
+    }
+    .footerBody1, .footerBody2 {
+        margin-top: 25vw;
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+    .footerBody1 h3, .footerBody2 h3 {
+        font-size: 20px;
+    }
+    .socialMediaIcon {
+        width: 35px;
+        height: 35px;
+    }
+    .footerContact {
+        font-size: 14px;
+    }
+    .footerBody2 iframe {
+        height: 11vw;
+    }
+} 
+
+@media screen and (max-width: 600px){ 
+    .footerContainer {
+        height: 60vw;
+    }
+    .footerBody1, .footerBody2 {
+        margin-top: 10vw;
+    }
+    .footerBody1 h3, .footerBody2 h3 {
+        font-size: 18px;
+    }
+    .footerContact {
+        font-size: 12px;
+    }
+    .footerBody2 iframe {
+        height: 15vw;
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 470px){
+    .footerContainer {
+        height: 60vw;
+    }
+    .footerBody1, .footerBody2 {
+        margin-top: 10vw;
+    }
+    .footerBody1 h3, .footerBody2 h3 {
+        font-size: 14px;
+    }
+    .footerContact {
+        font-size: 10px;
+    }
+    .footerBody2 iframe {
+        height: 15vw;
+        width: 40vw;
+    }
 }
