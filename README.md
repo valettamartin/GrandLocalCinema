@@ -17,7 +17,7 @@ Para hacer uso de esta, usted debe:
 
 ## ¿Donde puedo acceder a la página en linea?
 
-La página se encuentra hosteada en la siguiente dirección web: https://valettamartin.github.io/PreEntrega3-Valetta/
+La página se encuentra hosteada en la siguiente dirección web: https://valettamartin.github.io/GrandLocalCinema/ y en https://grandlocalcinema.netlify.app/
 
 # Información técnica:
 
